@@ -57,7 +57,7 @@ docker run -p 8080:8080 --env SECRET_TOKEN=local k8s-demo-app:1.0.0
 Застосування всієї папки:
 
 ```bash
-# застосовуємо всі маніфести (можна одразу папку)
+# застосовуємо всі маніфести (можна одразу всю папку для зручності)
 kubectl apply -f k8s/
 ```
 
@@ -161,7 +161,7 @@ kubectl apply -f k8s/configmap.yaml
 kubectl rollout restart deployment k8s-demo-api -n k8s-demo
 ```
 
-### 7. Ingress
+### 7. Ingress - робимо DNS маску для додатку
 ```bash
 # вмикаємо Ingress Controller
 minikube addons enable ingress
